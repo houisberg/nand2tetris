@@ -91,16 +91,5 @@ CHIP CPU {
         Or(a=j1orj2true, b=j3true, out=j1orj2orj3true);
         And(a=instIsC, b=j1orj2orj3true, out=pcLoad);
         Not(in=pcLoad, out=pcInc);
-
- 
-        // // ALUのout=0のパターン
-        // And(a=zr, b=instruction[1], out=out-zero);
-        // // ALUのout≠0のパターン
-        // Not(in=ng, out=pos);
-        // And(a=ng, b=instruction[2], out=out-neg);
-        // And(a=pos, b=instruction[0], out=out-pos);
-        // Or(a=out-neg, b=out-pos, out=out-nonzero);
-        // Or(a=out-zero, b=out-nonzero, out=jmpIsValid);
-        // Not(in=jmpIsValid, out=inc);
         PC(in=ARegout, load=pcLoad, inc=pcInc, reset=reset, out[0..14]=pc);
 }
