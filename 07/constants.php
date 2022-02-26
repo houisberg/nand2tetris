@@ -27,3 +27,10 @@ define("A_NOT", "not");
 
 // セグメント
 define('CONSTANT', 'constant');
+define('LOCAL', 'local');
+define('ARGUMENT', 'argument');
+define('THIS', 'this');
+define('THAT', 'that');
+define('POINTER', 'pointer');
+define('TEMP', 'temp');
+define('S_STATIC', 'static');

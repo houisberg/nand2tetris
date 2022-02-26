@@ -8,7 +8,7 @@ $parser = new Parser($vmFile);
 
 $outputFileName = "test.asm";
 $codeWriter = new CodeWriter($outputFileName);
-$codeWriter->setFileName($outputFileName);
+$codeWriter->setFileName('StaticTest');
 $twoArgsCommands = [C_PUSH, C_POP, C_FUNCTION, C_CALL];
 // foreach ($filePaths as $filePath) {
     while ($parser->hasMoreCommands()) {

@@ -63,7 +63,9 @@ class Parser {
         if (strpos($this->currentLine, PUSH) !== false) {
             return C_PUSH;
         }
-        var_dump($this->currentLine);
+        if (strpos($this->currentLine, POP) !== false) {
+            return C_POP;
+        }
     }
 
     /**
